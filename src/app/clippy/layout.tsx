@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Home • kznlabs.com",
+  title: "Clippy • kznlabs.com",
 };
 
 export default function RootLayout({
