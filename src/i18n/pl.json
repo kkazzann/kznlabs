@@ -1,0 +1,81 @@
+{
+  "heroLabel": "Portfolio",
+  "heroTitle": "Cześć, jestem Kamil. Tworzę nowoczesne aplikacje i narzędzia webowe.",
+  "heroDescription": "Łączę wydajny kod z przemyślanym designem. Specjalizuję się w React, Next.js i szybkim wdrażaniu produktów (MVP). Na co dzień rozwijam własne projekty i dzielę się wiedzą techniczną.",
+  "badges": ["Frontend", "Backend", "React", "Next.js", "Kotlin", "Java", "UI/UX"],
+  "aboutTitle": "O mnie",
+  "aboutName": "Kamil Kazaniecki",
+  "aboutBody": "Fullstack Developer z zacięciem produktowym. Pomagam przekuwać pomysły w stabilne, skalowalne rozwiązania. W pracy cenię transparentność, iteracyjne podejście i bezpośrednią komunikację.",
+  "labels": {
+    "location": "Lokalizacja:",
+    "availability": "Dostępność:",
+    "phone": "Telefon:",
+    "contact": "Email:"
+  },
+  "locationValue": "Szczecin, Polska",
+  "availabilityValue": "Remote / Hybryda",
+  "phoneHidden": "+48 000 000 000",
+  "phoneToast": "Telefon dostępny na życzenie. Skontaktuj się mailowo.",
+  "emailHidden": "contact@kznlabs.com",
+  "emailToast": "Kliknij ten przycisk aby skopiować adres email →",
+  "emailActionLabel": "Skopiuj",
+  "emailCopiedToast": "Adres email skopiowany do schowka!",
+  "ctaButton": "Współpracujmy",
+  "openToWork": "Otwarty na oferty",
+  "footer": {
+    "copyright": "© 2026 Kamil Kazaniecki. Wszelkie prawa zastrzeżone.",
+    "availableForHire": "Dostępny do projektów freelance",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    }
+  },
+  "projectsTitle": "Projekty",
+  "projectsSubtitle": "aktualne inicjatywy",
+  "projects": [
+    {
+      "name": "chunkware.com",
+      "desc": "Dokumentacja i Landing Page dla ekosystemu Chunkware.",
+      "tag": "Web / Docs",
+      "image": "https://placehold.co/600x360?text=chunkware.com&font=poppins",
+      "stack": ["simple-icons:nextdotjs", "vscode-icons:file-type-reactjs", "vscode-icons:file-type-js-official", "vscode-icons:file-type-typescript-official", "vscode-icons:file-type-vscode"]
+    },
+    {
+      "name": "kznlabs.com",
+      "desc": "Autorskie studio produktowe. Prototypy, narzędzia i eksperymenty.",
+      "tag": "Brand / Studio",
+      "image": "https://placehold.co/600x360?text=kznlabs.com&font=poppins",
+      "stack": ["simple-icons:nextdotjs", "vscode-icons:file-type-reactjs", "vscode-icons:file-type-typescript-official", "vscode-icons:file-type-tailwind"]
+    },
+    {
+      "name": "Pluginy semimc.pl",
+      "desc": "Kolekcja pluginów usprawniających mechanikę i UX serwerów gier.",
+      "tag": "Game Dev / Plugins",
+      "image": "https://placehold.co/600x360?text=semimc.pl&font=poppins",
+      "stack": ["vscode-icons:file-type-kotlin", "vscode-icons:file-type-java", "vscode-icons:file-type-idea", "/papermc_logo.webp"]
+    }
+  ],
+  "timelineTitle": "Doświadczenie",
+  "timelineSubtitle": "moja droga zawodowa",
+  "timelineToast": "Pełna historia zatrudnienia dostępna na życzenie.",
+  "timeline": [
+    {
+      "period": "2025 - obecnie",
+      "title": "Frontend Developer",
+      "place": "BELIANI SERVICES POLAND Sp. z o.o.",
+      "desc": "Rozszerzenie dashbordu React z integracją GitHub API. Modernizacja infrastruktury Campaign Constructor (Node.js, Vite, pnpm). Rozszerzenie FIGMA do generacji obrazów poprzez Translations API. Wdrożenie niestandardowego API Translations na serwerze AlmaLinux."
+    },
+    {
+      "period": "2020",
+      "title": "Freelancer",
+      "place": "Samozatrudnienie",
+      "desc": "Tworzenie stron internetowych dla znajomych i małych firm. Desenvolvimento pluginów do Minecrafta, konfiguracja i zarządzanie serwerami. Budowa i utrzymanie produkcyjnych serwerów Minecraft."
+    }
+  ],
+  "postsTitle": "Ostatnie wpisy",
+  "postsSubtitle": "blog / notatki",
+  "postCategory": "Design / UI",
+  "postTitle": "Jak planuję layout pod szybkie wdrożenie",
+  "postExcerpt": "Krótkie przemyślenia o strukturze komponentów i skalowalności w projektach webowych."
+}

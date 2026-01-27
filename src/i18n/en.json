@@ -1,0 +1,97 @@
+{
+  "heroLabel": "Portfolio",
+  "heroTitle": "Hi, I'm Kamil. I build high-performance web apps and digital tools.",
+  "heroDescription": "Combining clean code with intuitive design. I specialize in React, Next.js, and rapid MVP delivery. Currently building products and sharing insights on modern web development.",
+  "badges": ["Frontend", "Backend", "React", "Next.js", "Kotlin", "Java", "UI/UX"],
+  "aboutTitle": "About me",
+  "aboutName": "Kamil Kazaniecki",
+  "aboutBody": "Fullstack Developer with a product mindset. I transform concepts into reliable, scalable solutions. I value transparency, iterative development, and direct feedback.",
+  "labels": {
+    "location": "Location:",
+    "availability": "Availability:",
+    "phone": "Phone:",
+    "contact": "Email:"
+  },
+  "locationValue": "Szczecin, Poland",
+  "availabilityValue": "Remote / Hybrid",
+  "phoneHidden": "+48 000 000 000",
+  "phoneToast": "Phone number available upon request.",
+  "emailHidden": "contact@kznlabs.com",
+  "emailToast": "Click this button to copy the email address →",
+  "emailActionLabel": "Copy",
+  "emailCopiedToast": "Email address copied to clipboard!",
+  "ctaButton": "Let's work together",
+  "openToWork": "Open to work",
+  "footer": {
+    "copyright": "© 2026 Kamil Kazaniecki. All rights reserved.",
+    "availableForHire": "Available for freelance projects",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    }
+  },
+  "projectsTitle": "Projects",
+  "projectsSubtitle": "current initiatives",
+  "projects": [
+    {
+      "name": "chunkware.com",
+      "desc": "Landing page and documentation for the Chunkware ecosystem.",
+      "tag": "Web / Docs",
+      "image": "https://placehold.co/600x360?text=chunkware.com&font=poppins",
+      "stack": [
+        "simple-icons:nextdotjs",
+        "vscode-icons:file-type-reactjs",
+        "vscode-icons:file-type-js-official",
+        "vscode-icons:file-type-typescript-official",
+        "vscode-icons:file-type-vscode"
+      ]
+    },
+    {
+      "name": "kznlabs.com",
+      "desc": "Personal product studio. Prototypes, tools, and digital experiments.",
+      "tag": "Brand / Studio",
+      "image": "https://placehold.co/600x360?text=kznlabs.com&font=poppins",
+      "stack": [
+        "simple-icons:nextjs",
+        "vscode-icons:file-type-reactjs",
+        "vscode-icons:file-type-typescript-official",
+        "vscode-icons:file-type-tailwind"
+      ]
+    },
+    {
+      "name": "Pluginy semimc.pl",
+      "desc": "A suite of custom plugins enhancing core mechanics and user experience.",
+      "tag": "Game Dev / Plugins",
+      "image": "https://placehold.co/600x360?text=semimc.pl&font=poppins",
+      "stack": [
+        "vscode-icons:file-type-kotlin",
+        "vscode-icons:file-type-java",
+        "vscode-icons:file-type-idea",
+        "/papermc_logo.webp"
+      ]
+    }
+  ],
+  "timelineTitle": "Experience",
+  "timelineSubtitle": "career path",
+  "timelineToast": "Full work experience available upon request.",
+  "timeline": [
+    {
+      "period": "2025 - present",
+      "title": "Frontend Developer",
+      "place": "dsfrgra rtg5ysrd cbvzcvb Sp. z o.o.",
+      "desc": "React dashboard extension with GitHub API integration. Modernized Campaign Constructor infrastructure (Node.js, Vite, pnpm). FIGMA extension for image generation via Translations API. Custom Translations API deployment on AlmaLinux."
+    },
+    {
+      "period": "2020 - present",
+      "title": "Freelancer",
+      "place": "self-employed",
+      "desc": "Web development for friends and small businesses. Minecraft plugin development, server configuration and management. Built and maintained production Minecraft servers."
+    }
+  ],
+  "postsTitle": "Latest posts",
+  "postsSubtitle": "blog / notes",
+  "postCategory": "Design / UI",
+  "postTitle": "How I plan layouts for rapid delivery",
+  "postExcerpt": "Short notes on component structure and scalability in modern web projects."
+}
