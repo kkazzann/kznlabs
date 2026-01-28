@@ -1,81 +1,122 @@
 {
-  "heroLabel": "Portfolio",
-  "heroTitle": "Cześć, jestem Kamil. Tworzę nowoczesne aplikacje i narzędzia webowe.",
-  "heroDescription": "Łączę wydajny kod z przemyślanym designem. Specjalizuję się w React, Next.js i szybkim wdrażaniu produktów (MVP). Na co dzień rozwijam własne projekty i dzielę się wiedzą techniczną.",
-  "badges": ["Frontend", "Backend", "React", "Next.js", "Kotlin", "Java", "UI/UX"],
-  "aboutTitle": "O mnie",
+  "heroLabel": "o mnie",
+  "heroTitle": "Cześć, tu Kamil. Buduję wydajne aplikacje i skalowalne produkty webowe.",
+  "heroDescription": "Fullstack Developer, który łączy precyzję backendu z dbałością o UI/UX. Specjalizuję się w ekosystemie React/Next.js i szybkim dostarczaniu wartości biznesowej (MVP).",
+  "badges": ["Frontend & Backend", "React & Next.js", "Kotlin & Java", "Performance", "Product Design"],
+  "aboutTitle": "Profil",
   "aboutName": "Kamil Kazaniecki",
-  "aboutBody": "Fullstack Developer z zacięciem produktowym. Pomagam przekuwać pomysły w stabilne, skalowalne rozwiązania. W pracy cenię transparentność, iteracyjne podejście i bezpośrednią komunikację.",
+  "aboutBody": "Programista z podejściem produktowym (\"product-minded engineer\"). Nie tylko piszę kod, ale pomagam przekuwać idee w stabilne rozwiązania biznesowe. Stawiam na czytelną architekturę, transparentną komunikację i iteracyjne ulepszanie produktu.",
   "labels": {
-    "location": "Lokalizacja:",
+    "location": "Baza:",
     "availability": "Dostępność:",
     "phone": "Telefon:",
-    "contact": "Email:"
+    "contact": "Email:",
+    "discord": "Discord:"
   },
-  "locationValue": "Szczecin, Polska",
-  "availabilityValue": "Remote / Hybryda",
+  "locationValue": "Szczecin / Remote",
+  "availabilityValue": "UoP: 2 miesiące wypowiedzenia; projekty: od ręki",
   "phoneHidden": "+48 000 000 000",
-  "phoneToast": "Telefon dostępny na życzenie. Skontaktuj się mailowo.",
+  "phoneToast": "Ze względów prywatności, proszę o pierwszy kontakt mailowy.",
   "emailHidden": "contact@kznlabs.com",
-  "emailToast": "Kliknij ten przycisk aby skopiować adres email →",
-  "emailActionLabel": "Skopiuj",
-  "emailCopiedToast": "Adres email skopiowany do schowka!",
-  "ctaButton": "Współpracujmy",
-  "openToWork": "Otwarty na oferty",
+  "emailToast": "Skopiuj adres do schowka",
+  "emailActionLabel": "Kopiuj",
+  "emailCopiedToast": "Email skopiowany! Czekam na wiadomość.",
+  "discordHidden": "kznlabs",
+  "discordCopiedToast": "Nazwa Discord skopiowana!",
+  "ctaButton": "Rozpocznijmy projekt",
+  "openToWork": "Szukam wyzwań",
   "footer": {
-    "copyright": "© 2026 Kamil Kazaniecki. Wszelkie prawa zastrzeżone.",
-    "availableForHire": "Dostępny do projektów freelance",
+    "copyright": "Design & Code by Kamil Kazaniecki",
+    "license": "MIT License",
+    "availableForHire": "Otwarty na współpracę / nowe wyzwania",
     "social": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "twitter": "Twitter"
+      "discord": "Discord"
     }
   },
   "projectsTitle": "Projekty",
-  "projectsSubtitle": "aktualne inicjatywy",
+  "projectsSubtitle": "wybrane realizacje",
   "projects": [
     {
       "name": "chunkware.com",
-      "desc": "Dokumentacja i Landing Page dla ekosystemu Chunkware.",
-      "tag": "Web / Docs",
+      "desc": "Platforma dystrybucji i dokumentacji dla ekosystemu pluginów. Zoptymalizowany landing page (Next.js) i system docs oparty o Nextra.",
+      "tag": "Web / Documentation",
       "image": "https://placehold.co/600x360?text=chunkware.com&font=poppins",
-      "stack": ["simple-icons:nextdotjs", "vscode-icons:file-type-reactjs", "vscode-icons:file-type-js-official", "vscode-icons:file-type-typescript-official", "vscode-icons:file-type-vscode"]
+      "stack": [
+        "logos:nextjs-icon",
+        "vscode-icons:file-type-reactjs",
+        "vscode-icons:file-type-typescript-official"
+      ]
     },
     {
       "name": "kznlabs.com",
-      "desc": "Autorskie studio produktowe. Prototypy, narzędzia i eksperymenty.",
-      "tag": "Brand / Studio",
+      "desc": "Osobisty brand cyfrowy. Showcase umiejętności technicznych, blog deweloperski i wizytówka w jednym. Nacisk na SEO i Performance.",
+      "tag": "Personal Brand",
       "image": "https://placehold.co/600x360?text=kznlabs.com&font=poppins",
-      "stack": ["simple-icons:nextdotjs", "vscode-icons:file-type-reactjs", "vscode-icons:file-type-typescript-official", "vscode-icons:file-type-tailwind"]
+      "stack": [
+        "logos:nextjs-icon",
+        "vscode-icons:file-type-tailwind",
+        "vscode-icons:file-type-typescript-official"
+      ]
     },
     {
-      "name": "Pluginy semimc.pl",
-      "desc": "Kolekcja pluginów usprawniających mechanikę i UX serwerów gier.",
-      "tag": "Game Dev / Plugins",
+      "name": "Ekosystem Minecraft",
+      "desc": "Inżynieria backendowa o wysokiej współbieżności. Autorskie pluginy (Java/Kotlin), optymalizacja silników serwerowych i zarządzanie infrastrukturą.",
+      "tag": "Backend / GameDev",
       "image": "https://placehold.co/600x360?text=semimc.pl&font=poppins",
-      "stack": ["vscode-icons:file-type-kotlin", "vscode-icons:file-type-java", "vscode-icons:file-type-idea", "/papermc_logo.webp"]
+      "stack": [
+        "vscode-icons:file-type-kotlin",
+        "logos:java",
+        "devicon:gradle",
+        "logos:intellij-idea"
+      ]
     }
   ],
   "timelineTitle": "Doświadczenie",
-  "timelineSubtitle": "moja droga zawodowa",
-  "timelineToast": "Pełna historia zatrudnienia dostępna na życzenie.",
+  "timelineSubtitle": "ścieżka kariery",
+  "timelineToast": "Szczegółowe referencje dostępne na życzenie.",
   "timeline": [
     {
-      "period": "2025 - obecnie",
+      "period": "05.2025 - obecnie",
       "title": "Frontend Developer",
-      "place": "BELIANI SERVICES POLAND Sp. z o.o.",
-      "desc": "Rozszerzenie dashbordu React z integracją GitHub API. Modernizacja infrastruktury Campaign Constructor (Node.js, Vite, pnpm). Rozszerzenie FIGMA do generacji obrazów poprzez Translations API. Wdrożenie niestandardowego API Translations na serwerze AlmaLinux."
+      "place": "dsfrgra rtg5ysrd cbvzcvb Sp. z o.o.",
+      "desc": "Rozwój kluczowych narzędzi wewnętrznych. Zaprojektowanie Dashboardu analitycznego (React) z pełną integracją GitHub API. Modernizacja architektury 'Konstruktora Kampanii' (migracja do Vite/pnpm, Node.js). Wdrożenie generatora tłumaczonych obrazków do Figmy oraz budowa niestandardowego API tłumaczeń z systemem cache (AlmaLinux)."
     },
     {
-      "period": "2020",
-      "title": "Freelancer",
-      "place": "Samozatrudnienie",
-      "desc": "Tworzenie stron internetowych dla znajomych i małych firm. Desenvolvimento pluginów do Minecrafta, konfiguracja i zarządzanie serwerami. Budowa i utrzymanie produkcyjnych serwerów Minecraft."
+      "period": "2020 - obecnie",
+      "title": "Fullstack Freelancer",
+      "place": "kznlabs.com",
+      "desc": "Kompleksowe realizacje webowe dla sektora MŚP. Od analizy wymagań, przez design, aż po wdrożenie i utrzymanie. Rozwój oprogramowania Open Source oraz administracja serwerami Linux o wysokim obciążeniu."
     }
   ],
-  "postsTitle": "Ostatnie wpisy",
-  "postsSubtitle": "blog / notatki",
-  "postCategory": "Design / UI",
-  "postTitle": "Jak planuję layout pod szybkie wdrożenie",
-  "postExcerpt": "Krótkie przemyślenia o strukturze komponentów i skalowalności w projektach webowych."
+  "postsTitle": "Blog",
+  "postsSubtitle": "wiedza i notatki",
+  "postCategory": "[placeholder category]",
+  "postTitle": "[placeholder title]",
+  "postExcerpt": "[placeholder excerpt]",
+  "certificatesTitle": "Edukacja & Certyfikaty",
+  "certificatesSubtitle": "ciągły rozwój",
+  "certificateButton": "Zobacz weryfikację",
+  "certificates": [
+    {
+      "title": "Informatyka - Programowanie (inżynier)",
+      "issuer": "Uniwersytet WSB Merito Szczecin",
+      "date": "Październik 2022 - Luty 2026",
+      "duration": "Studia inżynierskie",
+      "description": "Kierunek Informatyka (specjalność: Programowanie). Nacisk na praktyczne tworzenie oprogramowania, podstawy inżynierii oprogramowania oraz pracę projektową.",
+      "skills": ["Informatyka", "Programowanie", "Inżynieria oprogramowania"],
+      "image": "/merito.png"
+    },
+    {
+      "title": "AI in Business Development",
+      "issuer": "Google & SGH",
+      "date": "Październik 2025",
+      "duration": "5 tygodni",
+      "description": "Intensywny bootcamp 'Umiejętności Jutra'. Praktyczne wdrażanie modeli AI (Gemini) do automatyzacji procesów biznesowych, inżynieria promptów oraz etyka sztucznej inteligencji.",
+      "skills": ["Business Automation", "Gemini", "Prompt Engineering", "AI Ethics"],
+      "credentialUrl": "https://cdn.umiejetnoscijutra.pl/certificates/1d9ae96c-5957-40f2-936f-3105eaa74ab8",
+      "image": "/umiejetnosci_jutra.png"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 type Language = "en" | "pl";
 
@@ -35,27 +35,22 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const detected = detectLanguage();
-    if (detected !== language) {
-      setLanguageState(detected);
-    }
+    setLanguageState(detected);
     document.documentElement.lang = detected;
     setIsReady(true);
-  }, [language]);
+  }, []);
 
-  const setLanguage = useCallback((next: Language) => {
+  const setLanguage = (next: Language) => {
     setLanguageState(next);
     if (typeof window !== "undefined") {
       window.localStorage.setItem(STORAGE_KEY, next);
       document.documentElement.lang = next;
     }
-  }, []);
+  };
 
-  const value = useMemo(
-    () => ({ language, setLanguage, isReady }),
-    [language, setLanguage, isReady]
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, isReady }}>{children}</LanguageContext.Provider>
   );
-
-  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }
 
 export function useLanguage() {

@@ -1,97 +1,122 @@
 {
-  "heroLabel": "Portfolio",
-  "heroTitle": "Hi, I'm Kamil. I build high-performance web apps and digital tools.",
-  "heroDescription": "Combining clean code with intuitive design. I specialize in React, Next.js, and rapid MVP delivery. Currently building products and sharing insights on modern web development.",
-  "badges": ["Frontend", "Backend", "React", "Next.js", "Kotlin", "Java", "UI/UX"],
-  "aboutTitle": "About me",
+  "heroLabel": "about me",
+  "heroTitle": "Hello, I'm Kamil. Building high-performance apps and scalable web products.",
+  "heroDescription": "Fullstack Developer bridging backend logic with UI/UX precision. Specializing in the React/Next.js ecosystem and rapid delivery of business value (MVP).",
+  "badges": ["Frontend & Backend", "React & Next.js", "Kotlin & Java", "Performance", "Product Design"],
+  "aboutTitle": "Profile",
   "aboutName": "Kamil Kazaniecki",
-  "aboutBody": "Fullstack Developer with a product mindset. I transform concepts into reliable, scalable solutions. I value transparency, iterative development, and direct feedback.",
+  "aboutBody": "Product-minded engineer. I don't just write code; I help turn ideas into stable business solutions. I prioritize clean architecture, transparent communication, and iterative product improvement.",
   "labels": {
-    "location": "Location:",
+    "location": "Based in:",
     "availability": "Availability:",
     "phone": "Phone:",
-    "contact": "Email:"
+    "contact": "Email:",
+    "discord": "Discord:"
   },
-  "locationValue": "Szczecin, Poland",
-  "availabilityValue": "Remote / Hybrid",
+  "locationValue": "Szczecin, Poland / Remote",
+  "availabilityValue": "Employment: ~2 months’ notice; projects: immediately",
   "phoneHidden": "+48 000 000 000",
-  "phoneToast": "Phone number available upon request.",
+  "phoneToast": "For privacy reasons, please contact me via email first.",
   "emailHidden": "contact@kznlabs.com",
-  "emailToast": "Click this button to copy the email address →",
+  "emailToast": "Copy email to clipboard",
   "emailActionLabel": "Copy",
-  "emailCopiedToast": "Email address copied to clipboard!",
+  "emailCopiedToast": "Email copied! Awaiting your message.",
+  "discordHidden": "kznlabs",
+  "discordCopiedToast": "Discord handle copied!",
   "ctaButton": "Let's work together",
-  "openToWork": "Open to work",
+  "openToWork": "Open to offers",
   "footer": {
-    "copyright": "© 2026 Kamil Kazaniecki. All rights reserved.",
-    "availableForHire": "Available for freelance projects",
+    "copyright": "Design & Code by Kamil Kazaniecki",
+    "license": "MIT License",
+    "availableForHire": "Available for hire / open to new challenges",
     "social": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "twitter": "Twitter"
+      "discord": "Discord"
     }
   },
   "projectsTitle": "Projects",
-  "projectsSubtitle": "current initiatives",
+  "projectsSubtitle": "selected works",
   "projects": [
     {
       "name": "chunkware.com",
-      "desc": "Landing page and documentation for the Chunkware ecosystem.",
-      "tag": "Web / Docs",
+      "desc": "Distribution and documentation platform for the plugin ecosystem. Optimized landing page (Next.js) and a robust documentation system based on Nextra.",
+      "tag": "Web / Documentation",
       "image": "https://placehold.co/600x360?text=chunkware.com&font=poppins",
       "stack": [
-        "simple-icons:nextdotjs",
+        "logos:nextjs-icon",
         "vscode-icons:file-type-reactjs",
-        "vscode-icons:file-type-js-official",
-        "vscode-icons:file-type-typescript-official",
-        "vscode-icons:file-type-vscode"
+        "vscode-icons:file-type-typescript-official"
       ]
     },
     {
       "name": "kznlabs.com",
-      "desc": "Personal product studio. Prototypes, tools, and digital experiments.",
-      "tag": "Brand / Studio",
+      "desc": "Personal digital brand. A showcase of technical skills, developer blog, and digital card. Strong focus on SEO and Web Performance.",
+      "tag": "Personal Brand",
       "image": "https://placehold.co/600x360?text=kznlabs.com&font=poppins",
       "stack": [
-        "simple-icons:nextjs",
-        "vscode-icons:file-type-reactjs",
-        "vscode-icons:file-type-typescript-official",
-        "vscode-icons:file-type-tailwind"
+        "logos:nextjs-icon",
+        "vscode-icons:file-type-tailwind",
+        "vscode-icons:file-type-typescript-official"
       ]
     },
     {
-      "name": "Pluginy semimc.pl",
-      "desc": "A suite of custom plugins enhancing core mechanics and user experience.",
-      "tag": "Game Dev / Plugins",
+      "name": "Minecraft Ecosystem",
+      "desc": "High-concurrency backend engineering. Custom plugins (Java/Kotlin), server engine optimization, and infrastructure management.",
+      "tag": "Backend / GameDev",
       "image": "https://placehold.co/600x360?text=semimc.pl&font=poppins",
       "stack": [
         "vscode-icons:file-type-kotlin",
-        "vscode-icons:file-type-java",
-        "vscode-icons:file-type-idea",
-        "/papermc_logo.webp"
+        "logos:java",
+        "devicon:gradle",
+        "logos:intellij-idea"
       ]
     }
   ],
   "timelineTitle": "Experience",
   "timelineSubtitle": "career path",
-  "timelineToast": "Full work experience available upon request.",
+  "timelineToast": "Full employment history and references available upon request.",
   "timeline": [
     {
-      "period": "2025 - present",
+      "period": "May 2025 - Present",
       "title": "Frontend Developer",
       "place": "dsfrgra rtg5ysrd cbvzcvb Sp. z o.o.",
-      "desc": "React dashboard extension with GitHub API integration. Modernized Campaign Constructor infrastructure (Node.js, Vite, pnpm). FIGMA extension for image generation via Translations API. Custom Translations API deployment on AlmaLinux."
+      "desc": "Development of core internal tools. Designed an analytics Dashboard (React) with full GitHub API integration. Modernized 'Campaign Builder' architecture (migration to Vite/pnpm, Node.js). Implemented generative AI for Figma and built a custom caching translation API (AlmaLinux)."
     },
     {
-      "period": "2020 - present",
-      "title": "Freelancer",
-      "place": "self-employed",
-      "desc": "Web development for friends and small businesses. Minecraft plugin development, server configuration and management. Built and maintained production Minecraft servers."
+      "period": "2020 - Present",
+      "title": "Fullstack Freelancer",
+      "place": "kznlabs.com",
+      "desc": "End-to-end web solutions for the SME sector. From requirements analysis to design, deployment, and maintenance. Open Source software development and administration of high-load Linux servers."
     }
   ],
-  "postsTitle": "Latest posts",
-  "postsSubtitle": "blog / notes",
-  "postCategory": "Design / UI",
-  "postTitle": "How I plan layouts for rapid delivery",
-  "postExcerpt": "Short notes on component structure and scalability in modern web projects."
+  "postsTitle": "Blog",
+  "postsSubtitle": "notes & thoughts",
+  "postCategory": "[Category Placeholder]",
+  "postTitle": "[Article Title Placeholder]",
+  "postExcerpt": "[Short description placeholder text...]",
+  "certificatesTitle": "Education & Certs",
+  "certificatesSubtitle": "continuous growth",
+  "certificateButton": "View Credential",
+  "certificates": [
+    {
+      "title": "Computer Science - Programming (B.Eng.)",
+      "issuer": "WSB Merito University, Szczecin",
+      "date": "October 2022 - February 2026",
+      "duration": "Engineering degree",
+      "description": "Computer Science program (specialization: Programming) focused on practical software development, software engineering fundamentals, and project-based work.",
+      "skills": ["Computer Science", "Programming", "Software Engineering"],
+      "image": "/merito.png"
+    },
+    {
+      "title": "AI in Business Development",
+      "issuer": "Google & SGH",
+      "date": "October 2025",
+      "duration": "5 weeks",
+      "description": "Intensive 'Skills of Tomorrow' bootcamp. Practical implementation of AI models (Gemini) for business process automation, prompt engineering, and AI ethics. Final exam passed with distinction.",
+      "skills": ["Business Automation", "Gemini", "Prompt Engineering", "AI Ethics"],
+      "credentialUrl": "https://cdn.umiejetnoscijutra.pl/certificates/1d9ae96c-5957-40f2-936f-3105eaa74ab8",
+      "image": "/umiejetnosci_jutra.png"
+    }
+  ]
 }

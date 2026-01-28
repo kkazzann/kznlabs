@@ -16,15 +16,21 @@
   --color-foreground: var(--foreground);
   --font-ui: var(--font-ui);
   --font-sans: var(--font-ui);
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
-
 
 @layer base {
   html {
-    font-family: var(--font-ui), "Sofia Sans", -apple-system, BlinkMacSystemFont,
-      "SF Pro Text", "SF Pro Display", "Segoe UI", Arial, sans-serif;
+    font-family:
+      var(--font-ui),
+      "Sofia Sans",
+      -apple-system,
+      BlinkMacSystemFont,
+      "SF Pro Text",
+      "SF Pro Display",
+      "Segoe UI",
+      Arial,
+      sans-serif;
     background: var(--background);
     color: var(--foreground);
   }
@@ -57,25 +63,54 @@
         color-mix(in oklab, var(--muted) 20%, transparent) 1px,
         transparent 2px
       ),
-      radial-gradient(
-        circle at 2px 2px,
-        color-mix(in oklab, var(--muted) 55%, transparent) 0,
-        transparent 2px
-      );
-    background-size: 6px 6px, 10px 10px;
-    background-position: 0 0, 3px 2px;
+      radial-gradient(circle at 2px 2px, color-mix(in oklab, var(--muted) 55%, transparent) 0, transparent 2px);
+    background-size:
+      6px 6px,
+      10px 10px;
+    background-position:
+      0 0,
+      3px 2px;
     -webkit-background-clip: text;
     background-clip: text;
     text-shadow: 0 0 12px color-mix(in oklab, var(--muted) 45%, transparent);
     animation: obscured-float 4.5s linear infinite;
+    will-change: background-position;
   }
 }
 
 @keyframes obscured-float {
   0% {
-    background-position: 0 0, 3px 2px;
+    background-position:
+      0 0,
+      3px 2px;
   }
   100% {
-    background-position: 12px 6px, -8px 10px;
+    background-position:
+      12px 6px,
+      -8px 10px;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+    will-change: transform;
+  }
+  .animate-marquee-slow {
+    animation: marquee 35s linear infinite;
+    will-change: transform;
+  }
+  .animate-marquee-fast {
+    animation: marquee 15s linear infinite;
+    will-change: transform;
   }
 }

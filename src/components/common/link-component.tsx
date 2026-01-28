@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { ExternalLink, Link2 } from "lucide-react";
+import { Icon } from "@iconify/react";
 import { trackExternalLink } from "@/lib/analytics";
 
 type LinkType = "inner" | "outer";
@@ -44,7 +44,7 @@ export function LinkComponent({ type, href, className, children, ...props }: Lin
   if (isOuter) {
     return (
       <a
-        className={cn("inline-flex items-center gap-1.5 transition-colors hover:text-[var(--foreground)]", className)}
+        className={cn("inline-flex items-center gap-1 whitespace-nowrap transition-colors hover:text-[var(--foreground)]", className)}
         href={href}
         rel="noreferrer noopener"
         target="_blank"
@@ -52,19 +52,19 @@ export function LinkComponent({ type, href, className, children, ...props }: Lin
         {...props}
       >
         {children}
-        <ExternalLink className="h-3.5 w-3.5" />
+        <Icon icon="mdi:open-in-new" className="h-3.5 w-3.5 flex-shrink-0" />
       </a>
     );
   }
 
   return (
     <Link
-      className={cn("inline-flex items-center gap-1.5 transition-colors hover:text-[var(--foreground)]", className)}
+      className={cn("inline-flex items-center gap-1 whitespace-nowrap transition-colors hover:text-[var(--foreground)]", className)}
       href={href}
       {...props}
     >
       {children}
-      <Link2 className="h-3.5 w-3.5" />
+      <Icon icon="mdi:link" className="h-3.5 w-3.5 flex-shrink-0" />
     </Link>
   );
 }

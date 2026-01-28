@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useLanguage } from "@/components/ui/language-provider";
+import { useLanguage } from "@/components/features/language-provider";
 import { trackLanguageChange } from "@/lib/analytics";
 
 export function LanguageSwitcher({ className }: { className?: string }) {
@@ -29,7 +29,6 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         aria-hidden="true"
       />
       <button
-        type="button"
         onClick={() => handleLanguageChange("en")}
         className={cn(
           "relative z-10 cursor-pointer rounded-full px-2.5 py-1 transition-colors",
@@ -39,7 +38,6 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         EN
       </button>
       <button
-        type="button"
         onClick={() => handleLanguageChange("pl")}
         className={cn(
           "relative z-10 cursor-pointer rounded-full px-2.5 py-1 transition-colors",

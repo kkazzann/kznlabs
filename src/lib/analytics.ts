@@ -20,6 +20,26 @@ export const trackProjectClick = (projectName: string) => {
   trackEvent("project_click", { project: projectName });
 };
 
+export const trackCtaClick = (location: string) => {
+  trackEvent("cta_click", { location });
+};
+
+export const trackSocialClick = (platform: "github" | "linkedin" | "discord", location: string) => {
+  trackEvent("social_click", { platform, location });
+};
+
+export const trackSocialCopy = (platform: "discord", location: string) => {
+  trackEvent("social_copy", { platform, location });
+};
+
+export const trackBlogClick = (location: string) => {
+  trackEvent("blog_click", { location });
+};
+
+export const trackCertificateClick = (title: string, issuer: string) => {
+  trackEvent("certificate_click", { title, issuer });
+};
+
 export const trackLanguageChange = (from: string, to: string) => {
   trackEvent("language_change", { from, to });
 };
