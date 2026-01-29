@@ -26,8 +26,8 @@ export function ProjectsSection({ translations, onProjectClick }: ProjectsSectio
         <span className="whitespace-nowrap text-xs text-[var(--muted)]">{subtitle}</span>
       </div>
 
-      <Bleed className="-mx-4 sm:-mx-6 md:-mx-8">
-        <div className="grid lg:w-[110%] gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 md:py-2 lg:relative lg:-left-[5%] lg:-right-[5%]">
+      <Bleed className="-mx-0">
+        <div className="grid lg:w-[115%] gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 md:py-2 lg:relative lg:-left-[7.5%] lg:-right-[7.5%]">
           {projects.map((project) => (
             <Card key={project.name} className="p-3 shadow-[0_18px_50px_rgba(0,0,0,0.12)] sm:p-4">
               <img
