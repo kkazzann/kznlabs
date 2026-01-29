@@ -18,12 +18,15 @@ export function HeroSection({ translations, onEmailCopy }: HeroSectionProps) {
   return (
     <div className="min-w-0 w-full space-y-4 text-center sm:text-left">
       <div className="text-xs uppercase tracking-[0.2em] text-[var(--muted)] sm:tracking-[0.3em]">{heroLabel}</div>
+      
       <h1 className="break-words text-2xl font-semibold leading-tight text-[var(--foreground)] sm:text-3xl md:text-4xl">
         {heroTitle}
       </h1>
+      
       <p className="mx-auto max-w-xl break-words text-sm leading-relaxed text-[var(--muted)] text-justify sm:mx-0 sm:text-base">
         {heroDescription}
       </p>
+      
       <div className="w-full overflow-hidden">
         <Marquee speed="slow" pauseOnHover>
           {badges.map((badge) => (
@@ -39,6 +42,7 @@ export function HeroSection({ translations, onEmailCopy }: HeroSectionProps) {
           ))}
         </Marquee>
       </div>
+
       <HeroActions translations={translations} onEmailCopy={onEmailCopy} className="hidden sm:flex" />
     </div>
   );

@@ -19,6 +19,7 @@ export function TimelineSection({ translations }: TimelineSectionProps) {
         <h2 className="break-words text-lg font-semibold sm:text-xl">{title}</h2>
         <span className="whitespace-nowrap text-xs text-[var(--muted)]">{subtitle}</span>
       </div>
+      
       <div className="space-y-2.5 sm:space-y-3">
         {timeline.map((item) => (
           <Card key={item.title} className="p-3 sm:p-4">

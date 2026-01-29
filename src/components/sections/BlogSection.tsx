@@ -24,8 +24,10 @@ export function BlogSection({ translations, blogPlaceholderImage, showContent, h
             {title}
           </LinkComponent>
         </h2>
+
         <span className="whitespace-nowrap text-xs text-[var(--muted)]">{subtitle}</span>
       </div>
+
       <div className="relative">
         {!hideSkeleton && (
           <div
@@ -46,6 +48,7 @@ export function BlogSection({ translations, blogPlaceholderImage, showContent, h
             </div>
           </div>
         )}
+
         <div
           className={cn(
             "grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 transition-opacity duration-500",
@@ -62,8 +65,10 @@ export function BlogSection({ translations, blogPlaceholderImage, showContent, h
                   width="640"
                   height="360"
                 />
+
                 <div className="break-words text-xs text-[var(--muted)] sm:text-sm">{postCategory}</div>
                 <div className="break-words text-sm font-semibold sm:text-base">{postTitle}</div>
+
                 <p className="break-words text-xs leading-relaxed text-[var(--muted)] sm:text-sm">{postExcerpt}</p>
               </div>
             </Card>

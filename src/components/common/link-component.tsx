@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Icon } from "@iconify/react";
+import { Icon, link, openInNew } from "@/lib/iconify";
 import { trackExternalLink } from "@/lib/analytics";
 
 type LinkType = "inner" | "outer";
@@ -55,7 +55,7 @@ export function LinkComponent({ type, href, className, children, ...props }: Lin
         {...props}
       >
         {children}
-        <Icon icon="mdi:open-in-new" className="h-3.5 w-3.5 flex-shrink-0" />
+        <Icon icon={openInNew} className="h-3.5 w-3.5 flex-shrink-0" />
       </a>
     );
   }
@@ -70,7 +70,7 @@ export function LinkComponent({ type, href, className, children, ...props }: Lin
       {...props}
     >
       {children}
-      <Icon icon="mdi:link" className="h-3.5 w-3.5 flex-shrink-0" />
+      <Icon icon={link} className="h-3.5 w-3.5 flex-shrink-0" />
     </Link>
   );
 }

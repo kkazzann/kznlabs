@@ -2,7 +2,7 @@
 
 import type { Translations } from "@/i18n/types";
 import { cn } from "@/lib/utils";
-import { Icon } from "@iconify/react";
+import { Icon, arrowRight, discord, github, linkedin } from "@/lib/iconify";
 import { trackCtaClick, trackSocialClick } from "@/lib/analytics";
 
 interface HeroActionsProps {
@@ -22,8 +22,9 @@ export function HeroActions({ translations, onEmailCopy, className }: HeroAction
         className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-[var(--foreground)] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:scale-105 hover:shadow-lg sm:w-auto sm:px-6 sm:py-3"
       >
         {translations.ctaButton}
-        <Icon icon="mdi:arrow-right" className="size-4" />
+        <Icon icon={arrowRight} className="size-4" />
       </button>
+      
       <div className="flex gap-2 sm:gap-2">
         <a
           href="https://github.com/kkazzann"
@@ -33,8 +34,9 @@ export function HeroActions({ translations, onEmailCopy, className }: HeroAction
           className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] text-[var(--muted)] transition-colors hover:border-[var(--foreground)] hover:text-[var(--foreground)]"
           onClick={() => trackSocialClick("github", "hero_actions")}
         >
-          <Icon icon="mdi:github" className="h-4 w-4" />
+          <Icon icon={github} className="h-4 w-4" />
         </a>
+      
         <a
           href="https://linkedin.com/in/kamil-kazaniecki"
           target="_blank"
@@ -43,8 +45,9 @@ export function HeroActions({ translations, onEmailCopy, className }: HeroAction
           className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] text-[var(--muted)] transition-colors hover:border-[var(--foreground)] hover:text-[var(--foreground)]"
           onClick={() => trackSocialClick("linkedin", "hero_actions")}
         >
-          <Icon icon="mdi:linkedin" className="h-4 w-4" />
+          <Icon icon={linkedin} className="h-4 w-4" />
         </a>
+      
         <a
           href="https://discordapp.com/users/205983099647950848"
           target="_blank"
@@ -53,7 +56,7 @@ export function HeroActions({ translations, onEmailCopy, className }: HeroAction
           className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] text-[var(--muted)] transition-colors hover:border-[var(--foreground)] hover:text-[var(--foreground)]"
           onClick={() => trackSocialClick("discord", "hero_actions")}
         >
-          <Icon icon="ic:baseline-discord" className="h-4 w-4" />
+          <Icon icon={discord} className="h-4 w-4" />
         </a>
       </div>
     </div>

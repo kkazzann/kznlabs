@@ -37,7 +37,27 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const detected = detectLanguage();
     setLanguageState(detected);
     document.documentElement.lang = detected;
-    setIsReady(true);
+    let isMounted = true;
+
+    const waitForFonts = document.fonts?.ready ?? Promise.resolve();
+    const waitForLoad = new Promise<void>((resolve) => {
+      if (document.readyState === "complete") {
+        resolve();
+        return;
+      }
+      const handleLoad = () => resolve();
+      window.addEventListener("load", handleLoad, { once: true });
+    });
+
+    Promise.all([waitForFonts, waitForLoad]).then(() => {
+      if (isMounted) {
+        setIsReady(true);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const setLanguage = (next: Language) => {
@@ -47,6 +67,17 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       document.documentElement.lang = next;
     }
   };
+
+  if (!isReady) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-[var(--background)]">
+        <div className="flex flex-col items-center gap-3 text-[var(--muted)]">
+          <div className="size-8 animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)]" />
+          <span className="text-xs uppercase tracking-[0.3em]">Loading</span>
+        </div>
+      </div>
+    );
+  }
 
   return <LanguageContext.Provider value={{ language, setLanguage, isReady }}>{children}</LanguageContext.Provider>;
 }

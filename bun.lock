@@ -5,7 +5,12 @@
     "": {
       "name": "kznlabs",
       "dependencies": {
-        "@iconify/react": "^6.0.2",
+        "@iconify-icon/react": "^3.0.3",
+        "@iconify-icons/devicon": "^1.2.17",
+        "@iconify-icons/ic": "^1.2.13",
+        "@iconify-icons/logos": "^1.2.36",
+        "@iconify-icons/mdi": "^1.2.48",
+        "@iconify-icons/vscode-icons": "^1.2.29",
         "clsx": "^2.1.1",
         "lucide-react": "^0.563.0",
         "next": "16.1.5",
@@ -93,7 +98,17 @@
 
     "@humanwhocodes/retry": ["@humanwhocodes/retry@0.4.3", "", {}, "sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ=="],
 
-    "@iconify/react": ["@iconify/react@6.0.2", "", { "dependencies": { "@iconify/types": "^2.0.0" }, "peerDependencies": { "react": ">=16" } }, "sha512-SMmC2sactfpJD427WJEDN6PMyznTFMhByK9yLW0gOTtnjzzbsi/Ke/XqsumsavFPwNiXs8jSiYeZTmLCLwO+Fg=="],
+    "@iconify-icon/react": ["@iconify-icon/react@3.0.3", "", { "dependencies": { "iconify-icon": "^3.0.2" }, "peerDependencies": { "react": ">=18.0.0" } }, "sha512-i4N/J0+UZWQu5Ty9Z+SxsNsuNdY7w2TnSuI65Qw9UrWudvnRodKfTUMvyg0hvxSZolqAE1YJVZu1HqgfpgPX9w=="],
+
+    "@iconify-icons/devicon": ["@iconify-icons/devicon@1.2.17", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-p471pxnBUbk5VTF6aqPqF8htTyqHO+BjOArE9WDmJdFt9POsb7yIShH9GElO1lk9OBU9KZV9PLUGWBzH9gqH6A=="],
+
+    "@iconify-icons/ic": ["@iconify-icons/ic@1.2.13", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-9Y3DLark8PYGtsHuWqbYxo2xAquL9vFQBZKRkpHuntyQJxBDLsfm3OO8mRbj2EmaAQR65pecH77DqQaLnN7yJQ=="],
+
+    "@iconify-icons/logos": ["@iconify-icons/logos@1.2.36", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-VzF299ubR4SKCZzLJoAawxeSjszJV1Q6y+4chCIPQuAafqfjtDjZxagZxL3ILKCsRLNN/z3zmCOOAL83tC8kLw=="],
+
+    "@iconify-icons/mdi": ["@iconify-icons/mdi@1.2.48", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-51bfNoRLhYDfxSu0Nyi/uRVq6q/tP4TyEc0vvuNwImrXpxrRJUAWJF2A36CfBkXm3hO9IBlph/CD/XNDJKgG6w=="],
+
+    "@iconify-icons/vscode-icons": ["@iconify-icons/vscode-icons@1.2.29", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-RlFypCiWBpfh0QWo37KpG65iehgzRRvEkIjVnyL8FLPowcadWfUgmqrCfgcI1YoAce3Rg/ARW1c6JNSYBjWSZw=="],
 
     "@iconify/types": ["@iconify/types@2.0.0", "", {}, "sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg=="],
 
@@ -518,6 +533,8 @@
     "hermes-estree": ["hermes-estree@0.25.1", "", {}, "sha512-0wUoCcLp+5Ev5pDW2OriHC2MJCbwLwuRx+gAqMTOkGKJJiBCLjtrvy4PWUGn6MIVefecRpzoOZ/UV6iGdOr+Cw=="],
 
     "hermes-parser": ["hermes-parser@0.25.1", "", { "dependencies": { "hermes-estree": "0.25.1" } }, "sha512-6pEjquH3rqaI6cYAXYPcz9MS4rY6R4ngRgrgfDshRptUZIc3lw0MCIJIGDj9++mfySOuPTHB4nrSW99BCvOPIA=="],
+
+    "iconify-icon": ["iconify-icon@3.0.2", "", { "dependencies": { "@iconify/types": "^2.0.0" } }, "sha512-DYPAumiUeUeT/GHT8x2wrAVKn1FqZJqFH0Y5pBefapWRreV1BBvqBVMb0020YQ2njmbR59r/IathL2d2OrDrxA=="],
 
     "ignore": ["ignore@5.3.2", "", {}, "sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g=="],
 

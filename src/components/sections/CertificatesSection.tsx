@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Icon } from "@iconify/react";
+import { Icon, calendar, clockOutline, openInNew } from "@/lib/iconify";
 import { Marquee } from "@/components/ui/marquee";
 import type { Translations } from "@/i18n/types";
 import { trackCertificateClick } from "@/lib/analytics";
@@ -27,6 +27,7 @@ export function CertificatesSection({ translations }: CertificatesSectionProps) 
         <h2 className="break-words text-lg font-semibold sm:text-xl">{title}</h2>
         <span className="whitespace-nowrap text-xs text-[var(--muted)]">{subtitle}</span>
       </div>
+
       <div className="space-y-4 sm:space-y-6">
         {certificates.map((cert: Certificate) => {
           const CardWrapper = cert.credentialUrl ? "a" : "div";
@@ -64,13 +65,15 @@ export function CertificatesSection({ translations }: CertificatesSectionProps) 
                           <div className="break-words text-xs font-medium uppercase tracking-wider text-[var(--muted)]">
                             {cert.issuer}
                           </div>
+
                           <h3 className="mt-1 break-words text-base font-semibold text-[var(--foreground)] sm:text-lg md:text-xl">
                             {cert.title}
                           </h3>
                         </div>
+
                         {cert.credentialUrl && (
                           <button className="hidden w-fit cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-lg border border-[var(--border)] px-2.5 py-1.5 text-xs font-medium text-[var(--muted)] transition-colors hover:border-[var(--foreground)] hover:text-[var(--foreground)] sm:flex sm:px-3">
-                            <Icon icon="mdi:open-in-new" className="h-3.5 w-3.5" />
+                            <Icon icon={openInNew} className="h-3.5 w-3.5" />
                             {buttonText}
                           </button>
                         )}
@@ -78,12 +81,13 @@ export function CertificatesSection({ translations }: CertificatesSectionProps) 
 
                       <div className="flex flex-wrap justify-center gap-2 text-xs text-[var(--muted)] sm:justify-start sm:gap-3">
                         <div className="flex items-center gap-1.5">
-                          <Icon icon="mdi:calendar" className="h-3.5 w-3.5 flex-shrink-0" />
+                          <Icon icon={calendar} className="h-3.5 w-3.5 flex-shrink-0" />
                           <span className="break-words">{cert.date}</span>
                         </div>
+
                         {cert.duration && (
                           <div className="flex items-center gap-1.5">
-                            <Icon icon="mdi:clock-outline" className="h-3.5 w-3.5 flex-shrink-0" />
+                            <Icon icon={clockOutline} className="h-3.5 w-3.5 flex-shrink-0" />
                             <span className="break-words">{cert.duration}</span>
                           </div>
                         )}
@@ -103,6 +107,7 @@ export function CertificatesSection({ translations }: CertificatesSectionProps) 
                             </Badge>
                           ))}
                         </div>
+
                         <Marquee className="sm:hidden" speed="slow" pauseOnHover>
                           {cert.skills.map((skill) => (
                             <Badge key={skill} className="flex-shrink-0 whitespace-nowrap text-xs">
@@ -118,7 +123,7 @@ export function CertificatesSection({ translations }: CertificatesSectionProps) 
                         className="flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-lg border border-[var(--border)] px-3 py-2.5 text-xs font-medium text-[var(--muted)] transition-colors hover:border-[var(--foreground)] hover:text-[var(--foreground)] sm:hidden"
                         onClick={() => trackCertificateClick(cert.title, cert.issuer)}
                       >
-                        <Icon icon="mdi:open-in-new" className="h-3.5 w-3.5" />
+                        <Icon icon={openInNew} className="h-3.5 w-3.5" />
                         {buttonText}
                       </button>
                     )}
@@ -129,6 +134,7 @@ export function CertificatesSection({ translations }: CertificatesSectionProps) 
                           <span className="text-xs text-[var(--muted)]">Organizer:</span>
                           <img src="/google.webp" alt="Google" className="h-4" style={{ aspectRatio: "1280/433" }} />
                         </div>
+
                         <div className="flex items-center gap-2">
                           <span className="text-xs text-[var(--muted)]">Partner:</span>
                           <img src="/sgh.png" alt="SGH" className="h-6 opacity-80" style={{ aspectRatio: "232/153" }} />
