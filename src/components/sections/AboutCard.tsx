@@ -12,12 +12,7 @@ interface AboutCardProps {
   onDiscordCopy: () => void;
 }
 
-export function AboutCard({
-  translations,
-  onEmailCopy,
-  onPhoneClick,
-  onDiscordCopy,
-}: AboutCardProps) {
+export function AboutCard({ translations, onEmailCopy, onPhoneClick, onDiscordCopy }: AboutCardProps) {
   const {
     aboutTitle,
     aboutName,
@@ -58,13 +53,19 @@ export function AboutCard({
           </div>
           <div className="break-words">
             <span className="font-semibold text-[var(--foreground)]">{labels.phone}</span>{" "}
-            <button className="obscured-text cursor-pointer inline-block px-1 py-0.5 transition-opacity hover:opacity-90" onClick={onPhoneClick}>
+            <button
+              className="obscured-text cursor-pointer inline-block px-1 py-0.5 transition-opacity hover:opacity-90"
+              onClick={onPhoneClick}
+            >
               {phoneHidden}
             </button>
           </div>
           <div className="break-words">
             <span className="font-semibold text-[var(--foreground)]">{labels.contact}</span>{" "}
-            <button className="obscured-text cursor-pointer inline-block px-1 py-0.5 transition-opacity hover:opacity-90" onClick={onEmailCopy}>
+            <button
+              className="obscured-text cursor-pointer inline-block px-1 py-0.5 transition-opacity hover:opacity-90"
+              onClick={onEmailCopy}
+            >
               {emailHidden}
             </button>
           </div>

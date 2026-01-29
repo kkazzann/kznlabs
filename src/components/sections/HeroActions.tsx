@@ -13,12 +13,7 @@ interface HeroActionsProps {
 
 export function HeroActions({ translations, onEmailCopy, className }: HeroActionsProps) {
   return (
-    <div
-      className={cn(
-        "flex flex-col items-center gap-3 pt-2 sm:flex-row sm:items-center sm:items-start",
-        className,
-      )}
-    >
+    <div className={cn("flex flex-col items-center gap-3 pt-2 sm:flex-row sm:items-center sm:items-start", className)}>
       <button
         onClick={() => {
           trackCtaClick("hero_actions");

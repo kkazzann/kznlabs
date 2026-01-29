@@ -16,7 +16,8 @@ import { CertificatesSection } from "@/components/sections/CertificatesSection";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { Footer } from "@/components/common/Footer";
 
-const blogPlaceholderImage = "https://placehold.co/640x360?text=Blog+Post&font=poppins";
+const blogPlaceholderImage =
+  "https://placehold.co/640x360?text=Blog+Post&font=poppins";
 const emailAddress = "contact@kznlabs.com";
 
 export default function Home() {
@@ -74,7 +75,11 @@ export default function Home() {
             onPhoneClick={handlePhoneClick}
             onDiscordCopy={handleDiscordCopy}
           />
-          <HeroActions translations={t} onEmailCopy={handleEmailCopy} className="sm:hidden pt-0" />
+          <HeroActions
+            translations={t}
+            onEmailCopy={handleEmailCopy}
+            className="sm:hidden pt-0"
+          />
         </section>
 
         <ProjectsSection

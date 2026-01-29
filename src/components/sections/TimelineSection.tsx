@@ -24,10 +24,15 @@ export function TimelineSection({ translations }: TimelineSectionProps) {
           <Card key={item.title} className="p-3 sm:p-4">
             <div className="text-xs text-[var(--muted)]">{item.period}</div>
             <div className="mt-1.5 break-words text-sm font-semibold sm:mt-2 sm:text-base">{item.title}</div>
-            <div className="break-words text-xs text-[var(--muted)] sm:text-sm" onClick={() => toast.warning(timelineToast)}>
+            <div
+              className="break-words text-xs text-[var(--muted)] sm:text-sm"
+              onClick={() => toast.warning(timelineToast)}
+            >
               <span className="obscured-text">{item.place}</span>
             </div>
-            <p className="mt-1.5 break-words text-xs leading-relaxed text-[var(--muted)] sm:mt-2 sm:text-sm">{item.desc}</p>
+            <p className="mt-1.5 break-words text-xs leading-relaxed text-[var(--muted)] sm:mt-2 sm:text-sm">
+              {item.desc}
+            </p>
           </Card>
         ))}
       </div>

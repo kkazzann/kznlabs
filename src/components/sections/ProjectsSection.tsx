@@ -5,6 +5,7 @@ import { Bleed } from "@/components/ui/bleed";
 import { LinkComponent } from "@/components/common/link-component";
 import { Icon } from "@iconify/react";
 import type { Translations } from "@/i18n/types";
+import { cn } from "@/lib/utils";
 
 type Project = Translations["projects"][number];
 
@@ -15,12 +16,7 @@ interface ProjectsSectionProps {
   onProjectClick: (projectName: string) => void;
 }
 
-export function ProjectsSection({
-  translations,
-  showContent,
-  hideSkeleton,
-  onProjectClick,
-}: ProjectsSectionProps) {
+export function ProjectsSection({ translations, showContent, hideSkeleton, onProjectClick }: ProjectsSectionProps) {
   const { projectsTitle: title, projectsSubtitle: subtitle, projects } = translations;
 
   return (
@@ -35,7 +31,10 @@ export function ProjectsSection({
         <div className="relative">
           {!hideSkeleton && (
             <div
-              className={`pointer-events-none absolute inset-0 transition-opacity duration-500 ${showContent ? "opacity-0" : "opacity-100"}`}
+              className={cn(
+                "pointer-events-none absolute inset-0 transition-opacity duration-500",
+                showContent ? "opacity-0" : "opacity-100",
+              )}
             >
               <div className="grid gap-4 md:grid-cols-3 md:py-2 [@media(min-width:1300px)]:w-[115%] [@media(min-width:1300px)]:-translate-x-[7.5%]">
                 {[1, 2, 3].map((item) => (
@@ -50,7 +49,10 @@ export function ProjectsSection({
             </div>
           )}
           <div
-            className={`grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 md:py-2 [@media(min-width:1300px)]:w-[115%] [@media(min-width:1300px)]:-translate-x-[7.5%] transition-opacity duration-500 ${showContent ? "opacity-100" : "opacity-0"}`}
+            className={cn(
+              "grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 md:py-2 [@media(min-width:1300px)]:w-[115%] [@media(min-width:1300px)]:-translate-x-[7.5%] transition-opacity duration-500",
+              showContent ? "opacity-100" : "opacity-0",
+            )}
           >
             {projects.map((project) => (
               <Card key={project.name} className="p-3 shadow-[0_18px_50px_rgba(0,0,0,0.12)] sm:p-4">
@@ -67,7 +69,9 @@ export function ProjectsSection({
                     {project.name}
                   </LinkComponent>
                 </div>
-                <p className="mt-1.5 break-words text-xs leading-relaxed text-[var(--muted)] text-justify sm:mt-2 sm:text-sm">{project.desc}</p>
+                <p className="mt-1.5 break-words text-xs leading-relaxed text-[var(--muted)] text-justify sm:mt-2 sm:text-sm">
+                  {project.desc}
+                </p>
                 {project.stack && (
                   <div className="mt-3 flex flex-wrap gap-2.5 sm:mt-4">
                     {project.stack.map((icon: string) =>

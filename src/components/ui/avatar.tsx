@@ -18,5 +18,11 @@ const dimensions = {
 };
 
 export function Avatar({ size = "md", className, ...props }: AvatarProps) {
-  return <img className={cn("rounded-full border border-[var(--border)] object-cover", sizes[size], className)} {...dimensions[size]} {...props} />;
+  return (
+    <img
+      className={cn("rounded-full border border-[var(--border)] object-cover", sizes[size], className)}
+      {...dimensions[size]}
+      {...props}
+    />
+  );
 }

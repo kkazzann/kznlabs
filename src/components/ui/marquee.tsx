@@ -24,19 +24,13 @@ export function Marquee({
   }[speed];
 
   return (
-    <div
-      className={cn(
-        "group relative flex gap-4 overflow-hidden",
-        className
-      )}
-      {...props}
-    >
+    <div className={cn("group relative flex gap-4 overflow-hidden", className)} {...props}>
       <div
         className={cn(
           "flex min-w-full shrink-0 items-center justify-around gap-4",
           speedClass,
           reverse && "[animation-direction:reverse]",
-          pauseOnHover && "group-hover:[animation-play-state:paused]"
+          pauseOnHover && "group-hover:[animation-play-state:paused]",
         )}
       >
         {children}
@@ -46,7 +40,7 @@ export function Marquee({
           "flex min-w-full shrink-0 items-center justify-around gap-4",
           speedClass,
           reverse && "[animation-direction:reverse]",
-          pauseOnHover && "group-hover:[animation-play-state:paused]"
+          pauseOnHover && "group-hover:[animation-play-state:paused]",
         )}
         aria-hidden="true"
       >

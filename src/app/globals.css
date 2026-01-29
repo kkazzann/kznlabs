@@ -16,7 +16,9 @@
   --color-foreground: var(--foreground);
   --font-ui: var(--font-ui);
   --font-sans: var(--font-ui);
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
 
 @layer base {
@@ -63,7 +65,11 @@
         color-mix(in oklab, var(--muted) 20%, transparent) 1px,
         transparent 2px
       ),
-      radial-gradient(circle at 2px 2px, color-mix(in oklab, var(--muted) 55%, transparent) 0, transparent 2px);
+      radial-gradient(
+        circle at 2px 2px,
+        color-mix(in oklab, var(--muted) 55%, transparent) 0,
+        transparent 2px
+      );
     background-size:
       6px 6px,
       10px 10px;

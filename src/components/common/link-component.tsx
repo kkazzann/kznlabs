@@ -44,7 +44,10 @@ export function LinkComponent({ type, href, className, children, ...props }: Lin
   if (isOuter) {
     return (
       <a
-        className={cn("inline-flex items-center gap-1 whitespace-nowrap transition-colors hover:text-[var(--foreground)]", className)}
+        className={cn(
+          "inline-flex items-center gap-1 whitespace-nowrap transition-colors hover:text-[var(--foreground)]",
+          className,
+        )}
         href={href}
         rel="noreferrer noopener"
         target="_blank"
@@ -59,7 +62,10 @@ export function LinkComponent({ type, href, className, children, ...props }: Lin
 
   return (
     <Link
-      className={cn("inline-flex items-center gap-1 whitespace-nowrap transition-colors hover:text-[var(--foreground)]", className)}
+      className={cn(
+        "inline-flex items-center gap-1 whitespace-nowrap transition-colors hover:text-[var(--foreground)]",
+        className,
+      )}
       href={href}
       {...props}
     >
