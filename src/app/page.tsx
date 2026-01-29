@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import en from "@/i18n/en.json";
 import pl from "@/i18n/pl.json";
 import { toast } from "sonner";
@@ -10,11 +11,29 @@ import { trackLead, trackProjectClick, trackSocialCopy } from "@/lib/analytics";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { HeroActions } from "@/components/sections/HeroActions";
 import { AboutCard } from "@/components/sections/AboutCard";
-import { ProjectsSection } from "@/components/sections/ProjectsSection";
-import { TimelineSection } from "@/components/sections/TimelineSection";
-import { CertificatesSection } from "@/components/sections/CertificatesSection";
-import { BlogSection } from "@/components/sections/BlogSection";
-import { Footer } from "@/components/common/Footer";
+const ProjectsSection = dynamic(
+  () => import("@/components/sections/ProjectsSection").then((mod) => mod.ProjectsSection),
+  { loading: () => <div className="h-56 rounded-2xl border border-[var(--border)]" /> },
+);
+
+const TimelineSection = dynamic(
+  () => import("@/components/sections/TimelineSection").then((mod) => mod.TimelineSection),
+  { loading: () => <div className="h-48 rounded-2xl border border-[var(--border)]" /> },
+);
+
+const CertificatesSection = dynamic(
+  () => import("@/components/sections/CertificatesSection").then((mod) => mod.CertificatesSection),
+  { loading: () => <div className="h-56 rounded-2xl border border-[var(--border)]" /> },
+);
+
+const BlogSection = dynamic(
+  () => import("@/components/sections/BlogSection").then((mod) => mod.BlogSection),
+  { loading: () => <div className="h-48 rounded-2xl border border-[var(--border)]" /> },
+);
+
+const Footer = dynamic(() => import("@/components/common/Footer").then((mod) => mod.Footer), {
+  loading: () => <div className="h-24" />,
+});
 
 const blogPlaceholderImage = "https://placehold.co/640x360?text=coming+soon&font=poppins";
 const emailAddress = "contact@kznlabs.com";
