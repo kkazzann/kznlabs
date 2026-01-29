@@ -63,19 +63,24 @@ export default function RootLayout({
             Work in Progress - Portfolio under active development
           </p>
         </div>
+
         <LanguageProvider>
           <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-3 py-4 sm:px-4 sm:py-6 lg:px-8">
             <div className="overflow-visible rounded-2xl border border-[var(--border)] bg-[var(--panel)] shadow-[var(--shadow)] sm:rounded-3xl">
               <header className="relative flex items-center justify-between border-b border-[var(--border)] px-3 py-3 sm:px-5 sm:py-4">
                 <WindowControls />
+
                 <div className="absolute left-1/2 hidden -translate-x-1/2 text-sm font-semibold text-[var(--foreground)]/80 sm:block">
                   kznlabs.com
                 </div>
+
                 <nav className="flex items-center gap-2 text-xs text-[var(--muted)] sm:gap-3 sm:text-sm">
                   <LanguageSwitcher />
+
                   <LinkComponent href="https://github.com/kkazzann" className="hidden sm:inline-flex">
                     GitHub
                   </LinkComponent>
+
                   <LinkComponent
                     href="https://discordapp.com/users/205983099647950848"
                     className="hidden sm:inline-flex"
@@ -84,9 +89,11 @@ export default function RootLayout({
                   </LinkComponent>
                 </nav>
               </header>
+
               <main className="px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8">{children}</main>
             </div>
           </div>
+
           <Toaster position="top-center" />
         </LanguageProvider>
       </body>
