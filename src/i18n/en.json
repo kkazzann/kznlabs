@@ -42,21 +42,21 @@
       "name": "chunkware.com",
       "desc": "Distribution and documentation platform for the plugin ecosystem. Optimized landing page (Next.js) and a robust documentation system based on Nextra.",
       "tag": "Web / Documentation",
-      "image": "https://placehold.co/600x360?text=chunkware.com&font=poppins",
+      "image": "/chunkware.png",
       "stack": ["logos:nextjs-icon", "vscode-icons:file-type-reactjs", "vscode-icons:file-type-typescript-official"]
     },
     {
       "name": "kznlabs.com",
       "desc": "Personal digital brand. A showcase of technical skills, developer blog, and digital card. Strong focus on SEO and Web Performance.",
       "tag": "Personal Brand",
-      "image": "https://placehold.co/600x360?text=kznlabs.com&font=poppins",
+      "image": "/kznlabs.png",
       "stack": ["logos:nextjs-icon", "vscode-icons:file-type-tailwind", "vscode-icons:file-type-typescript-official"]
     },
     {
       "name": "semimc.pl",
       "desc": "High-concurrency backend engineering. Custom plugins (Java/Kotlin), server engine optimization, and infrastructure management.",
       "tag": "Backend / GameDev",
-      "image": "https://placehold.co/600x360?text=semimc.pl&font=poppins",
+      "image": "/semimc_en.png",
       "stack": ["vscode-icons:file-type-kotlin", "logos:java", "devicon:gradle", "logos:intellij-idea"]
     }
   ],

@@ -73,23 +73,15 @@ export default function RootLayout({
                 </div>
                 <nav className="flex items-center gap-2 text-xs text-[var(--muted)] sm:gap-3 sm:text-sm">
                   <LanguageSwitcher />
-                  <LinkComponent
-                    href="https://github.com/"
-                    className="hidden sm:inline-flex"
-                  >
+                  <LinkComponent href="https://github.com/" className="hidden sm:inline-flex">
                     GitHub
                   </LinkComponent>
-                  <LinkComponent
-                    href="https://discord.com/"
-                    className="hidden sm:inline-flex"
-                  >
+                  <LinkComponent href="https://discord.com/" className="hidden sm:inline-flex">
                     Discord
                   </LinkComponent>
                 </nav>
               </header>
-              <main className="px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8">
-                {children}
-              </main>
+              <main className="px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8">{children}</main>
             </div>
           </div>
           <Toaster position="top-center" />

@@ -26,16 +26,14 @@ export function ProjectsSection({ translations, onProjectClick }: ProjectsSectio
         <span className="whitespace-nowrap text-xs text-[var(--muted)]">{subtitle}</span>
       </div>
 
-      <Bleed>
-        <div className="grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 md:py-2 [@media(min-width:1300px)]:w-[115%] [@media(min-width:1300px)]:-translate-x-[7.5%]">
+      <Bleed className="-mx-4 sm:-mx-6 md:-mx-8">
+        <div className="grid lg:w-[110%] gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 md:py-2 lg:relative lg:-left-[5%] lg:-right-[5%]">
           {projects.map((project) => (
             <Card key={project.name} className="p-3 shadow-[0_18px_50px_rgba(0,0,0,0.12)] sm:p-4">
               <img
                 alt={`${project.name} preview`}
-                className="h-32 w-full rounded-lg border border-[var(--border)] object-cover sm:h-36 sm:rounded-xl"
+                className="rounded-lg border border-[var(--border)] object-cover object-top sm:rounded-xl"
                 src={project.image}
-                width="600"
-                height="360"
               />
 
               <div className="mt-2 break-words text-xs text-[var(--muted)] sm:mt-3 sm:text-sm">{project.tag}</div>
