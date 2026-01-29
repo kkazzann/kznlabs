@@ -73,10 +73,13 @@ export default function RootLayout({
                 </div>
                 <nav className="flex items-center gap-2 text-xs text-[var(--muted)] sm:gap-3 sm:text-sm">
                   <LanguageSwitcher />
-                  <LinkComponent href="https://github.com/" className="hidden sm:inline-flex">
+                  <LinkComponent href="https://github.com/kkazzann" className="hidden sm:inline-flex">
                     GitHub
                   </LinkComponent>
-                  <LinkComponent href="https://discord.com/" className="hidden sm:inline-flex">
+                  <LinkComponent
+                    href="https://discordapp.com/users/205983099647950848"
+                    className="hidden sm:inline-flex"
+                  >
                     Discord
                   </LinkComponent>
                 </nav>
