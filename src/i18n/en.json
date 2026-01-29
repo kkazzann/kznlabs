@@ -61,7 +61,7 @@
       ]
     },
     {
-      "name": "Minecraft Ecosystem",
+      "name": "semimc.pl",
       "desc": "High-concurrency backend engineering. Custom plugins (Java/Kotlin), server engine optimization, and infrastructure management.",
       "tag": "Backend / GameDev",
       "image": "https://placehold.co/600x360?text=semimc.pl&font=poppins",

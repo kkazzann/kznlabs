@@ -61,7 +61,7 @@
       ]
     },
     {
-      "name": "Ekosystem Minecraft",
+      "name": "semimc.pl",
       "desc": "Inżynieria backendowa o wysokiej współbieżności. Autorskie pluginy (Java/Kotlin), optymalizacja silników serwerowych i zarządzanie infrastrukturą.",
       "tag": "Backend / GameDev",
       "image": "https://placehold.co/600x360?text=semimc.pl&font=poppins",
