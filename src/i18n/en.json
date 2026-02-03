@@ -1,5 +1,7 @@
 {
   "heroLabel": "about me",
+  "wipBanner": "Work in Progress - Portfolio under active development",
+  "contentPlaceholder": "[coming soon™]",
   "heroTitle": "Hello, I'm Kamil. Building high-performance apps and scalable web products.",
   "heroDescription": "Fullstack Developer bridging backend logic with UI/UX precision. Specializing in the React/Next.js ecosystem and rapid delivery of business value (MVP).",
   "badges": ["Frontend & Backend", "React & Next.js", "Kotlin & Java", "Performance", "Product Design"],
@@ -105,5 +107,24 @@
       "credentialUrl": "https://cdn.umiejetnoscijutra.pl/certificates/1d9ae96c-5957-40f2-936f-3105eaa74ab8",
       "image": "/umiejetnosci_jutra.png"
     }
-  ]
+  ],
+  "errors": {
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "Sorry, the page you're looking for doesn't exist. It might have been moved or deleted.",
+      "button": "Back to Home"
+    },
+    "error": {
+      "title": "Something went wrong!",
+      "description": "An unexpected error occurred. Our team has been notified.",
+      "tryAgain": "Try Again",
+      "button": "Back to Home"
+    },
+    "projectNotFound": {
+      "title": "Project Not Found",
+      "description": "Sorry, the project you're looking for doesn't exist.",
+      "button": "Back to Projects",
+      "homeButton": "Home"
+    }
+  }
 }

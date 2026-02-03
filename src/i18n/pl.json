@@ -1,5 +1,7 @@
 {
   "heroLabel": "o mnie",
+  "wipBanner": "Work in Progress - Portfolio nie jest jeszcze gotowe",
+  "contentPlaceholder": "[niedługo™]",
   "heroTitle": "Cześć, tu Kamil. Buduję wydajne aplikacje i skalowalne produkty webowe.",
   "heroDescription": "Fullstack Developer, który łączy precyzję backendu z dbałością o UI/UX. Specjalizuję się w ekosystemie React/Next.js i szybkim dostarczaniu wartości biznesowej (MVP).",
   "badges": ["Frontend & Backend", "React & Next.js", "Kotlin & Java", "Performance", "Product Design"],
@@ -105,5 +107,24 @@
       "credentialUrl": "https://cdn.umiejetnoscijutra.pl/certificates/1d9ae96c-5957-40f2-936f-3105eaa74ab8",
       "image": "/umiejetnosci_jutra.png"
     }
-  ]
+  ],
+  "errors": {
+    "notFound": {
+      "title": "Strona nie znaleziona",
+      "description": "Przepraszam, strona którą szukasz nie istnieje. Mogła zostać przeniesiona lub usunięta.",
+      "button": "Powrót na stronę główną"
+    },
+    "error": {
+      "title": "Coś poszło nie tak!",
+      "description": "Wystąpił nieoczekiwany błąd. Nasz zespół został powiadomiony.",
+      "tryAgain": "Spróbuj ponownie",
+      "button": "Powrót na stronę główną"
+    },
+    "projectNotFound": {
+      "title": "Projekt nie znaleziony",
+      "description": "Przepraszam, projekt którego szukasz nie istnieje.",
+      "button": "Powrót do Projektów",
+      "homeButton": "Strona główna"
+    }
+  }
 }
