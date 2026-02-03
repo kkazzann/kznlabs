@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Sofia_Sans } from "next/font/google";
 import "./globals.css";
-import { WindowControls } from "@/components/features/window-controls";
-import { LinkComponent } from "@/components/common/link-component";
+import { WipBanner } from "@/components/layout/WipBanner";
+import { Header } from "@/components/layout/Header";
 import { Toaster } from "sonner";
 import { LanguageProvider } from "@/components/features/language-provider";
-import { LanguageSwitcher } from "@/components/features/language-switcher";
 import Script from "next/script";
 
 const uiSans = Sofia_Sans({
@@ -58,37 +57,11 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-[image:linear-gradient(var(--background),var(--background))]">
-        <div className="sticky top-0 z-50 border-b border-yellow-600/30 bg-yellow-500/15 px-3 py-1.5 text-center backdrop-blur-sm sm:px-4 sm:py-2">
-          <p className="text-[10px] font-medium uppercase tracking-wide text-yellow-800 sm:text-xs sm:tracking-wider">
-            Work in Progress - Portfolio under active development
-          </p>
-        </div>
-
         <LanguageProvider>
+          <WipBanner />
           <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-3 py-4 sm:px-4 sm:py-6 lg:px-8">
             <div className="overflow-visible rounded-2xl border border-[var(--border)] bg-[var(--panel)] shadow-[var(--shadow)] sm:rounded-3xl">
-              <header className="relative flex items-center justify-between border-b border-[var(--border)] px-3 py-3 sm:px-5 sm:py-4">
-                <WindowControls />
-
-                <div className="absolute left-1/2 hidden -translate-x-1/2 text-sm font-semibold text-[var(--foreground)]/80 sm:block">
-                  kznlabs.com
-                </div>
-
-                <nav className="flex items-center gap-2 text-xs text-[var(--muted)] sm:gap-3 sm:text-sm">
-                  <LanguageSwitcher />
-
-                  <LinkComponent href="https://github.com/kkazzann" className="hidden sm:inline-flex">
-                    GitHub
-                  </LinkComponent>
-
-                  <LinkComponent
-                    href="https://discordapp.com/users/205983099647950848"
-                    className="hidden sm:inline-flex"
-                  >
-                    Discord
-                  </LinkComponent>
-                </nav>
-              </header>
+              <Header />
 
               <main className="px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8">{children}</main>
             </div>
