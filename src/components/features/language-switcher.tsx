@@ -3,14 +3,25 @@
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/components/features/language-provider";
 import { trackLanguageChange } from "@/lib/analytics";
+import { usePathname, useRouter } from "next/navigation";
+import { getLocaleFromPathname, replaceOrAddLocaleToPathname } from "@/i18n/locales";
 
 export function LanguageSwitcher({ className }: { className?: string }) {
   const { language, setLanguage } = useLanguage();
+  const router = useRouter();
+  const pathname = usePathname();
 
   const handleLanguageChange = (newLang: "en" | "pl") => {
     if (newLang !== language) {
       trackLanguageChange(language, newLang);
       setLanguage(newLang);
+
+      const currentLocale = getLocaleFromPathname(pathname);
+      const nextPath = currentLocale
+        ? pathname.replace(/^\/(en|pl)(?=\/|$)/, `/${newLang}`)
+        : replaceOrAddLocaleToPathname(pathname, newLang);
+
+      router.push(nextPath);
     }
   };
 
@@ -49,3 +60,4 @@ export function LanguageSwitcher({ className }: { className?: string }) {
     </div>
   );
 }
+

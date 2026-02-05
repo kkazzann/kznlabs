@@ -55,7 +55,7 @@ export function ProjectsSection({ translations, onProjectClick }: ProjectsSectio
                       <img
                         key={icon}
                         src={icon}
-                        alt="tech stack"
+                        alt={`${project.name} tech stack icon`}
                         className="size-5 object-contain opacity-80 transition-opacity hover:opacity-100"
                         width="20"
                         height="20"

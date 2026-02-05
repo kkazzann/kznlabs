@@ -1,45 +1,29 @@
 import { MetadataRoute } from "next";
 import en from "@/i18n/en.json";
+import { locales } from "@/i18n/locales";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://kznlabs.com";
 
-  const projects = en.projects.map((project) => ({
-    url: `${baseUrl}/project/${project.name.toLowerCase().replace(/\s+/g, "-").replace(/\./g, "")}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
+  const allUrls = new Set<string>();
+
+  const toProjectSlug = (name: string) => name.toLowerCase().replace(/\s+/g, "-").replace(/\./g, "");
+
+  for (const locale of locales) {
+    allUrls.add(`${baseUrl}/${locale}`);
+    allUrls.add(`${baseUrl}/${locale}/projects`);
+    allUrls.add(`${baseUrl}/${locale}/blog`);
+
+    for (const project of en.projects) {
+      allUrls.add(`${baseUrl}/${locale}/projects/${toProjectSlug(project.name)}`);
+    }
+  }
+
+  const now = new Date();
+  return Array.from(allUrls).map((url) => ({
+    url,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: url.endsWith("/en") || url.endsWith("/pl") ? 1 : 0.8,
   }));
-
-  const blogArticles = [
-    {
-      url: `${baseUrl}/blog/placeholder`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    },
-  ];
-
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/projects`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    ...projects,
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.8,
-    },
-    ...blogArticles,
-  ];
 }

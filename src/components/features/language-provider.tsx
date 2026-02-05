@@ -14,6 +14,11 @@ const LanguageContext = createContext<LanguageContextValue | undefined>(undefine
 
 const STORAGE_KEY = "kznlabs.language";
 
+function setLanguageCookie(language: Language) {
+  if (typeof document === "undefined") return;
+  document.cookie = `${STORAGE_KEY}=${language}; Path=/; Max-Age=31536000; SameSite=Lax`;
+}
+
 function detectLanguage(): Language {
   if (typeof window === "undefined") {
     return "en";
@@ -29,26 +34,35 @@ function detectLanguage(): Language {
   return "en";
 }
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("en");
-  const [isReady, setIsReady] = useState(false);
+export function LanguageProvider({
+  children,
+  initialLanguage,
+}: {
+  children: React.ReactNode;
+  initialLanguage?: Language;
+}) {
+  const [language, setLanguageState] = useState<Language>(() => initialLanguage ?? detectLanguage());
 
   useEffect(() => {
-    const detected = detectLanguage();
-    setLanguageState(detected);
-    document.documentElement.lang = detected;
-    setIsReady(true);
-  }, []);
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = language;
+    }
+    setLanguageCookie(language);
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(STORAGE_KEY, language);
+    }
+  }, [language]);
 
   const setLanguage = (next: Language) => {
     setLanguageState(next);
     if (typeof window !== "undefined") {
       window.localStorage.setItem(STORAGE_KEY, next);
       document.documentElement.lang = next;
+      setLanguageCookie(next);
     }
   };
 
-  return <LanguageContext.Provider value={{ language, setLanguage, isReady }}>{children}</LanguageContext.Provider>;
+  return <LanguageContext.Provider value={{ language, setLanguage, isReady: true }}>{children}</LanguageContext.Provider>;
 }
 
 export function useLanguage() {
@@ -58,3 +72,5 @@ export function useLanguage() {
   }
   return context;
 }
+
+export const LANGUAGE_STORAGE_KEY = STORAGE_KEY;

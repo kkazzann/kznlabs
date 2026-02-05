@@ -4,6 +4,8 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Icon, link, openInNew } from "@/lib/iconify";
 import { trackExternalLink } from "@/lib/analytics";
+import { replaceOrAddLocaleToPathname } from "@/i18n/locales";
+import { useLanguage } from "@/components/features/language-provider";
 
 type LinkType = "inner" | "outer";
 
@@ -34,6 +36,11 @@ function isExternalLink(href: string) {
 
 export function LinkComponent({ type, href, className, children, ...props }: LinkComponentProps) {
   const isOuter = type ? type === "outer" : isExternalLink(href);
+  const { language } = useLanguage();
+  const localizedHref =
+    !isOuter && href.startsWith("/")
+      ? replaceOrAddLocaleToPathname(href, language)
+      : href;
 
   const handleClick = () => {
     if (isOuter) {
@@ -66,7 +73,7 @@ export function LinkComponent({ type, href, className, children, ...props }: Lin
         "inline-flex items-center gap-1 whitespace-nowrap transition-colors hover:text-[var(--foreground)]",
         className,
       )}
-      href={href}
+      href={localizedHref}
       {...props}
     >
       {children}

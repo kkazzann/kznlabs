@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
+import { useParams } from "next/navigation";
+
 import { useLanguage } from "@/components/features/language-provider";
 import en from "@/i18n/en.json";
 import pl from "@/i18n/pl.json";
@@ -13,6 +15,8 @@ interface ErrorProps {
 export default function Error({ error, reset }: ErrorProps) {
   const { language } = useLanguage();
   const t = language === "en" ? en : pl;
+  const params = useParams<{ lang: string }>();
+  const lang = (params?.lang === "pl" || params?.lang === "en" ? params.lang : "en") as "en" | "pl";
 
   useEffect(() => {
     console.error(error);
@@ -32,7 +36,7 @@ export default function Error({ error, reset }: ErrorProps) {
             {t.errors.error.tryAgain}
           </button>
           <a
-            href="/"
+            href={`/${lang}`}
             className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-[var(--panel)] px-5 py-2.5 text-sm font-semibold text-[var(--foreground)] transition-all hover:scale-105 hover:shadow-lg sm:w-auto sm:px-6 sm:py-3"
           >
             {t.errors.error.button}
